@@ -5,14 +5,17 @@ import "./App.css";
 import NavBar from "./Components/NavBar";
 import Header from "./Components/Header";
 
+
+
 function App() {
   const [loading, setLoading] = useState(false);
-
-  const override = css`
-  display:block;
-  border-color:red;
-  margin-top:20%;
-  `;
+  const override = {
+    display: "block",
+    margin: "auto",
+    top: "200px",
+    borderColor: "red",
+  };
+  
   useEffect(() => 
   {
     setLoading(true);
@@ -20,9 +23,9 @@ function App() {
   }, []);
 
   return  (
-    <div className="App">
-      {
-        loading ? <PropagateLoader color={"#97c039"} loading={loading} css= {override} size={40} />
+    <div className="App">  
+    {
+        loading ? <PropagateLoader color={"#000000"} loading={loading} cssOverride={override} size={30} />
         :
         <>
           <NavBar />
