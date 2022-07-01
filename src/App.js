@@ -1,10 +1,35 @@
+import React, { useState, useEffect } from "react";
+import PropagateLoader from "react-spinners/PropagateLoader";
+import NavBar from "./Components/NavBar";
+import { css } from "@emotion/react";
 import "./App.css";
 
 function App() {
-  return <div>
-    <h1>hellooooo</h1>
-    <h1>hellohhhoooo</h1>
-  </div>;
+  const [loading, setLoading] = useState(false);
+
+  const override = css`
+  display:block;
+  border-color:red;
+  margin-top:20%;
+  `;
+  useEffect(() => 
+  {
+    setLoading(true);
+    setTimeout(() => { setLoading(false)}, 5000);
+  }, []);
+
+  return  (
+    <div className="App">
+      {
+        loading ? <PropagateLoader color={"#97c039"} loading={loading} css= {override} size={40} />
+        :
+        <>
+          <NavBar />
+        </>
+      }
+    </div>
+  )
+
 }
 
 export default App;
