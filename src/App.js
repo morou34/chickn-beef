@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import PropagateLoader from "react-spinners/PropagateLoader";
-import NavBar from "./Components/NavBar";
 import { css } from "@emotion/react";
 import "./App.css";
+import NavBar from "./Components/NavBar";
+import Header from "./Components/Header";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -15,7 +16,7 @@ function App() {
   useEffect(() => 
   {
     setLoading(true);
-    setTimeout(() => { setLoading(false)}, 5000);
+    setTimeout(() => { setLoading(false)}, 2000);
   }, []);
 
   return  (
@@ -25,6 +26,7 @@ function App() {
         :
         <>
           <NavBar />
+          <Header />
         </>
       }
     </div>
