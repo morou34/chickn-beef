@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import PropagateLoader from "react-spinners/PropagateLoader";
-import { css } from "@emotion/react";
+// import { css } from "@emotion/react";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Header from "./Components/Header";
+import SpinWheel from "./Components/SpinWheel";
 
 
 
@@ -29,7 +30,8 @@ function App() {
         :
         <>
           <NavBar />
-          <Header />
+          {/* <Header /> */}
+          <SpinWheel />
         </>
       }
     </div>
