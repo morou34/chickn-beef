@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import PropagateLoader from "react-spinners/PropagateLoader";
 // import { css } from "@emotion/react";
 import "./App.css";
-import NavBar from "./Components/NavBar";
-import Header from "./Components/Header";
+// import NavBar from "./Components/NavBar";
+// import Header from "./Components/Header";
 import SpinWheel from "./Components/SpinWheel";
 
 
@@ -29,7 +29,7 @@ function App() {
         loading ? <PropagateLoader color={"#000000"} loading={loading} cssOverride={override} size={30} />
         :
         <>
-          <NavBar />
+          {/* <NavBar /> */}
           {/* <Header /> */}
           <SpinWheel />
         </>
@@ -40,3 +40,4 @@ function App() {
 }
 
 export default App;
+
